@@ -1,0 +1,9 @@
+[Inputs]
+ENC_ONE_A
+ENC_ONE_B
+ENC_TWO_A
+ENC_TWO_B
+=wishbone_in[61:0]=
+[Outputs]
+=wishbone_out[33:0]=
+[BiDir]

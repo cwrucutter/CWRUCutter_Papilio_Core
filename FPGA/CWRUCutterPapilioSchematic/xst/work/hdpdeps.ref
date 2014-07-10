@@ -1,0 +1,83 @@
+V3 47
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Papilio_One_500K.vhf 2014/07/10.12:53:42 P.20131013
+EN work/Papilio_One_500K 1405011318 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Papilio_One_500K.vhf \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/Papilio_One_500K/BEHAVIORAL 1405011319 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Papilio_One_500K.vhf \
+      EN work/Papilio_One_500K 1405011318 CP Wing_GPIO CP Wishbone_Empty_Slot \
+      CP ZPUino_Papilio_One_V1 CP Papilio_Default_Wing_Pinout \
+      CP wb_THREE_PWM_INPUTS CP PWM_OUT_NO_WB CP COMM_zpuino_wb_UART \
+      CP wb_Dual_Quad_Encoder
+FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_Encoder_Module/Dual Encoders/CWRUCutter_QuadDecoder_One.vhd" 2014/07/10.12:50:01 P.20131013
+EN work/CWRUCutter_QuadDecoder_One 1405011290 \
+      FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_Encoder_Module/Dual Encoders/CWRUCutter_QuadDecoder_One.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/CWRUCutter_QuadDecoder_One/Behavioral 1405011291 \
+      FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_Encoder_Module/Dual Encoders/CWRUCutter_QuadDecoder_One.vhd" \
+      EN work/CWRUCutter_QuadDecoder_One 1405011290
+FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_Encoder_Module/Dual Encoders/CWRUCutter_QuadDecoder_Two.vhd" 2014/07/10.12:50:09 P.20131013
+EN work/CWRUCutter_QuadDecoder_TWO 1405011292 \
+      FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_Encoder_Module/Dual Encoders/CWRUCutter_QuadDecoder_Two.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/CWRUCutter_QuadDecoder_TWO/Behavioral 1405011293 \
+      FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_Encoder_Module/Dual Encoders/CWRUCutter_QuadDecoder_Two.vhd" \
+      EN work/CWRUCutter_QuadDecoder_TWO 1405011292
+FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_Encoder_Module/Dual Encoders/wb_Dual_Quad_Encoder.vhd" 2014/07/10.12:39:26 P.20131013
+EN work/wb_Dual_Quad_Encoder 1405011316 \
+      FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_Encoder_Module/Dual Encoders/wb_Dual_Quad_Encoder.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181 LB board PH board/zpu_config 1405011226 \
+      PH board/zpupkg 1405011227 PH board/zpuinopkg 1405011236
+AR work/wb_Dual_Quad_Encoder/rtl 1405011317 \
+      FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_Encoder_Module/Dual Encoders/wb_Dual_Quad_Encoder.vhd" \
+      EN work/wb_Dual_Quad_Encoder 1405011316 CP CWRUCutter_QuadDecoder_ONE \
+      CP CWRUCutter_QuadDecoder_TWO
+FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_Encoder_Module/Dual Encoders/wb_Quad_Encoder.vhd" 2014/07/10.10:51:35 P.20131013
+FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_PWM_Input_Module/Three PWM Inputs/CWRUCutter_PWMInput_ONE.vhd" 2014/06/19.12:21:36 P.20131013
+EN work/CWRUCutter_PWMInput_ONE 1405011296 \
+      FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_PWM_Input_Module/Three PWM Inputs/CWRUCutter_PWMInput_ONE.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/CWRUCutter_PWMInput_ONE/rtl 1405011297 \
+      FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_PWM_Input_Module/Three PWM Inputs/CWRUCutter_PWMInput_ONE.vhd" \
+      EN work/CWRUCutter_PWMInput_ONE 1405011296
+FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_PWM_Input_Module/Three PWM Inputs/CWRUCutter_PWMInput_THREE.vhd" 2014/06/19.12:20:10 P.20131013
+EN work/CWRUCutter_PWMInput_THREE 1405011300 \
+      FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_PWM_Input_Module/Three PWM Inputs/CWRUCutter_PWMInput_THREE.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/CWRUCutter_PWMInput_THREE/rtl 1405011301 \
+      FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_PWM_Input_Module/Three PWM Inputs/CWRUCutter_PWMInput_THREE.vhd" \
+      EN work/CWRUCutter_PWMInput_THREE 1405011300
+FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_PWM_Input_Module/Three PWM Inputs/CWRUCutter_PWMInput_TWO.vhd" 2014/06/19.12:21:03 P.20131013
+EN work/CWRUCutter_PWMInput_TWO 1405011298 \
+      FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_PWM_Input_Module/Three PWM Inputs/CWRUCutter_PWMInput_TWO.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/CWRUCutter_PWMInput_TWO/rtl 1405011299 \
+      FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_PWM_Input_Module/Three PWM Inputs/CWRUCutter_PWMInput_TWO.vhd" \
+      EN work/CWRUCutter_PWMInput_TWO 1405011298
+FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_PWM_Input_Module/Three PWM Inputs/wb_THREE_PWM_INPUTS.vhd" 2014/06/19.12:24:35 P.20131013
+EN work/wb_THREE_PWM_INPUTS 1405011312 \
+      FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_PWM_Input_Module/Three PWM Inputs/wb_THREE_PWM_INPUTS.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/wb_THREE_PWM_INPUTS/rtl 1405011313 \
+      FL "C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_PWM_Input_Module/Three PWM Inputs/wb_THREE_PWM_INPUTS.vhd" \
+      EN work/wb_THREE_PWM_INPUTS 1405011312 CP CWRUCutter_PWMInput_ONE \
+      CP CWRUCutter_PWMInput_TWO CP CWRUCutter_PWMInput_THREE
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_PWM_Output_Module/CWRUCutter_PWMOutput.vhd 2014/06/04.13:10:33 P.20131013
+EN work/CWRUCutter_PWMOutput 1405011294 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_PWM_Output_Module/CWRUCutter_PWMOutput.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/CWRUCutter_PWMOutput/rtl 1405011295 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_PWM_Output_Module/CWRUCutter_PWMOutput.vhd \
+      EN work/CWRUCutter_PWMOutput 1405011294
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_PWM_Output_Module/PWM_OUT_NO_WB.vhd 2014/06/05.11:55:23 P.20131013
+EN work/PWM_OUT_NO_WB 1405011314 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_PWM_Output_Module/PWM_OUT_NO_WB.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181 LB board PH board/zpu_config 1405011226 \
+      PH board/zpupkg 1405011227 PH board/zpuinopkg 1405011236
+AR work/PWM_OUT_NO_WB/rtl 1405011315 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterVHDLFiles/CWRUCutter_PWM_Output_Module/PWM_OUT_NO_WB.vhd \
+      EN work/PWM_OUT_NO_WB 1405011314 CP CWRUCutter_PWMOutput

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Setup\Dropbox\CWRUCutter_Papilio_Core\FPGA\CWRUCutterPapilioSchematic\Papilio_One_500K.ncd
+OUTFILE=C:\Users\Setup\Dropbox\CWRUCutter_Papilio_Core\FPGA\CWRUCutterPapilioSchematic\Papilio_One_500K.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5vq100
+WORKINGDIR=C:\Users\Setup\Dropbox\CWRUCutter_Papilio_Core\FPGA\CWRUCutterPapilioSchematic
+LICENSE=WebPack
+USER_INFO=210897653_0_0_442

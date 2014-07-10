@@ -1,0 +1,724 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+R:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml Papilio_One_500K.twx Papilio_One_500K.ncd -o
+Papilio_One_500K.twr Papilio_One_500K.pcf
+
+Design file:              Papilio_One_500K.ncd
+Physical constraint file: Papilio_One_500K.pcf
+Device,package,speed:     xc3s500e,vq100,-5 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "XLXI_38/clk_osc_32Mhz" PERIOD = 31 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is  10.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "XLXI_38/clk_osc_32Mhz" PERIOD = 31 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 21.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 31.000ns
+  Low pulse: 15.500ns
+  Low pulse limit: 5.000ns (Tdcmpw_CLKIN_25_50)
+  Physical resource: XLXI_38/clkgen_inst/DCM_inst/CLKIN
+  Logical resource: XLXI_38/clkgen_inst/DCM_inst/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: XLXI_38/clk_osc_32Mhz
+--------------------------------------------------------------------------------
+Slack: 21.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 31.000ns
+  High pulse: 15.500ns
+  High pulse limit: 5.000ns (Tdcmpw_CLKIN_25_50)
+  Physical resource: XLXI_38/clkgen_inst/DCM_inst/CLKIN
+  Logical resource: XLXI_38/clkgen_inst/DCM_inst/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: XLXI_38/clk_osc_32Mhz
+--------------------------------------------------------------------------------
+Slack: 27.365ns (period - min period limit)
+  Period: 31.000ns
+  Min period limit: 3.635ns (275.103MHz) (Tdcmpc)
+  Physical resource: XLXI_38/clkgen_inst/DCM_inst/CLKIN
+  Logical resource: XLXI_38/clkgen_inst/DCM_inst/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: XLXI_38/clk_osc_32Mhz
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PERIOD analysis for net "XLXI_38/clkgen_inst/dcmclock" 
+derived from  NET "XLXI_38/clk_osc_32Mhz" PERIOD = 31 ns HIGH 50%;  divided by 
+3.00 to 10.333 nS and duty cycle corrected to HIGH 5.166 nS  
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 94859 paths analyzed, 7721 endpoints analyzed, 1 failing endpoint
+ 1 timing error detected. (1 setup error, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  10.724ns.
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_38/zpuino/core/decr.stackOperation_2 (SLICE_X30Y40.G2), 173 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.391ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM04.B (RAM)
+  Destination:          XLXI_38/zpuino/core/decr.stackOperation_2 (FF)
+  Requirement:          10.333ns
+  Data Path Delay:      10.706ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.018ns (0.106 - 0.124)
+  Source Clock:         XLXN_408<147> rising at 0.000ns
+  Destination Clock:    XLXN_408<147> rising at 10.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM04.B to XLXI_38/zpuino/core/decr.stackOperation_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y9.DOB0     Tbcko                 2.446   XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM04
+                                                       XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM04.B
+    SLICE_X19Y69.F3      net (fanout=1)        1.004   XLXI_38/zpuino/rom_wb_dat_o<6>
+    SLICE_X19Y69.X       Tilo                  0.612   XLXI_38/zpuino/core/tOpcode_mux0001<6>7
+                                                       XLXI_38/zpuino/core/tOpcode_mux0001<6>7
+    SLICE_X18Y55.F4      net (fanout=4)        0.567   XLXI_38/zpuino/core/tOpcode_mux0001<6>7
+    SLICE_X18Y55.X       Tilo                  0.660   XLXI_38/zpuino/core/tOpcode<6>
+                                                       XLXI_38/zpuino/core/tOpcode_mux0001<6>31
+    SLICE_X31Y40.G3      net (fanout=20)       0.898   XLXI_38/zpuino/core/tOpcode<6>
+    SLICE_X31Y40.Y       Tilo                  0.612   N500
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>12
+    SLICE_X31Y40.F3      net (fanout=1)        0.020   XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>12/O
+    SLICE_X31Y40.X       Tilo                  0.612   N500
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>34_SW0
+    SLICE_X31Y41.G2      net (fanout=1)        0.066   N500
+    SLICE_X31Y41.Y       Tilo                  0.612   N590
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>34
+    SLICE_X31Y41.F4      net (fanout=1)        0.020   XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>34/O
+    SLICE_X31Y41.X       Tilo                  0.612   N590
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>65_SW0
+    SLICE_X30Y41.G4      net (fanout=2)        0.093   N590
+    SLICE_X30Y41.X       Tif5x                 1.000   N506
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>110_SW0_F
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>110_SW0
+    SLICE_X30Y40.G2      net (fanout=1)        0.096   N506
+    SLICE_X30Y40.CLK     Tgck                  0.776   XLXI_38/zpuino/core/decr.decodedOpcode_31
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>110
+                                                       XLXI_38/zpuino/core/decr.stackOperation_2
+    -------------------------------------------------  ---------------------------
+    Total                                     10.706ns (7.942ns logic, 2.764ns route)
+                                                       (74.2% logic, 25.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.335ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM04.B (RAM)
+  Destination:          XLXI_38/zpuino/core/decr.stackOperation_2 (FF)
+  Requirement:          10.333ns
+  Data Path Delay:      10.650ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.018ns (0.106 - 0.124)
+  Source Clock:         XLXN_408<147> rising at 0.000ns
+  Destination Clock:    XLXN_408<147> rising at 10.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM04.B to XLXI_38/zpuino/core/decr.stackOperation_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y9.DOB0     Tbcko                 2.446   XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM04
+                                                       XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM04.B
+    SLICE_X19Y69.F3      net (fanout=1)        1.004   XLXI_38/zpuino/rom_wb_dat_o<6>
+    SLICE_X19Y69.X       Tilo                  0.612   XLXI_38/zpuino/core/tOpcode_mux0001<6>7
+                                                       XLXI_38/zpuino/core/tOpcode_mux0001<6>7
+    SLICE_X18Y55.F4      net (fanout=4)        0.567   XLXI_38/zpuino/core/tOpcode_mux0001<6>7
+    SLICE_X18Y55.X       Tilo                  0.660   XLXI_38/zpuino/core/tOpcode<6>
+                                                       XLXI_38/zpuino/core/tOpcode_mux0001<6>31
+    SLICE_X31Y40.G3      net (fanout=20)       0.898   XLXI_38/zpuino/core/tOpcode<6>
+    SLICE_X31Y40.Y       Tilo                  0.612   N500
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>12
+    SLICE_X31Y40.F3      net (fanout=1)        0.020   XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>12/O
+    SLICE_X31Y40.X       Tilo                  0.612   N500
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>34_SW0
+    SLICE_X31Y41.G2      net (fanout=1)        0.066   N500
+    SLICE_X31Y41.Y       Tilo                  0.612   N590
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>34
+    SLICE_X31Y41.F4      net (fanout=1)        0.020   XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>34/O
+    SLICE_X31Y41.X       Tilo                  0.612   N590
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>65_SW0
+    SLICE_X30Y41.F4      net (fanout=2)        0.037   N590
+    SLICE_X30Y41.X       Tif5x                 1.000   N506
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>110_SW0_G
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>110_SW0
+    SLICE_X30Y40.G2      net (fanout=1)        0.096   N506
+    SLICE_X30Y40.CLK     Tgck                  0.776   XLXI_38/zpuino/core/decr.decodedOpcode_31
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>110
+                                                       XLXI_38/zpuino/core/decr.stackOperation_2
+    -------------------------------------------------  ---------------------------
+    Total                                     10.650ns (7.942ns logic, 2.708ns route)
+                                                       (74.6% logic, 25.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.045ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM24.B (RAM)
+  Destination:          XLXI_38/zpuino/core/decr.stackOperation_2 (FF)
+  Requirement:          10.333ns
+  Data Path Delay:      10.270ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.018ns (0.106 - 0.124)
+  Source Clock:         XLXN_408<147> rising at 0.000ns
+  Destination Clock:    XLXN_408<147> rising at 10.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM24.B to XLXI_38/zpuino/core/decr.stackOperation_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y8.DOB0     Tbcko                 2.446   XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM24
+                                                       XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM24.B
+    SLICE_X19Y69.F4      net (fanout=1)        0.568   XLXI_38/zpuino/rom_wb_dat_o<22>
+    SLICE_X19Y69.X       Tilo                  0.612   XLXI_38/zpuino/core/tOpcode_mux0001<6>7
+                                                       XLXI_38/zpuino/core/tOpcode_mux0001<6>7
+    SLICE_X18Y55.F4      net (fanout=4)        0.567   XLXI_38/zpuino/core/tOpcode_mux0001<6>7
+    SLICE_X18Y55.X       Tilo                  0.660   XLXI_38/zpuino/core/tOpcode<6>
+                                                       XLXI_38/zpuino/core/tOpcode_mux0001<6>31
+    SLICE_X31Y40.G3      net (fanout=20)       0.898   XLXI_38/zpuino/core/tOpcode<6>
+    SLICE_X31Y40.Y       Tilo                  0.612   N500
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>12
+    SLICE_X31Y40.F3      net (fanout=1)        0.020   XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>12/O
+    SLICE_X31Y40.X       Tilo                  0.612   N500
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>34_SW0
+    SLICE_X31Y41.G2      net (fanout=1)        0.066   N500
+    SLICE_X31Y41.Y       Tilo                  0.612   N590
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>34
+    SLICE_X31Y41.F4      net (fanout=1)        0.020   XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>34/O
+    SLICE_X31Y41.X       Tilo                  0.612   N590
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>65_SW0
+    SLICE_X30Y41.G4      net (fanout=2)        0.093   N590
+    SLICE_X30Y41.X       Tif5x                 1.000   N506
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>110_SW0_F
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>110_SW0
+    SLICE_X30Y40.G2      net (fanout=1)        0.096   N506
+    SLICE_X30Y40.CLK     Tgck                  0.776   XLXI_38/zpuino/core/decr.decodedOpcode_31
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<2>110
+                                                       XLXI_38/zpuino/core/decr.stackOperation_2
+    -------------------------------------------------  ---------------------------
+    Total                                     10.270ns (7.942ns logic, 2.328ns route)
+                                                       (77.3% logic, 22.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_38/zpuino/core/decr.stackOperation_1 (SLICE_X27Y35.G2), 133 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.069ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM32.B (RAM)
+  Destination:          XLXI_38/zpuino/core/decr.stackOperation_1 (FF)
+  Requirement:          10.333ns
+  Data Path Delay:      10.250ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.014ns (0.093 - 0.107)
+  Source Clock:         XLXN_408<147> rising at 0.000ns
+  Destination Clock:    XLXN_408<147> rising at 10.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM32.B to XLXI_38/zpuino/core/decr.stackOperation_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y9.DOB0     Tbcko                 2.446   XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM32
+                                                       XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM32.B
+    SLICE_X47Y51.G4      net (fanout=1)        1.398   XLXI_38/zpuino/rom_wb_dat_o<26>
+    SLICE_X47Y51.Y       Tilo                  0.612   XLXI_38/zpuino/core/decr_decodedOpcode_mux0000<31>3
+                                                       XLXI_38/zpuino/core/tOpcode_mux0001<2>20
+    SLICE_X33Y38.G4      net (fanout=4)        0.952   XLXI_38/zpuino/core/tOpcode_mux0001<2>20
+    SLICE_X33Y38.Y       Tilo                  0.612   XLXI_38/zpuino/core/sampledDecodedOpcode_and0000
+                                                       XLXI_38/zpuino/core/tOpcode_mux0001<2>31
+    SLICE_X32Y38.F2      net (fanout=21)       0.173   XLXI_38/zpuino/core/tOpcode<2>
+    SLICE_X32Y38.X       Tilo                  0.660   XLXI_38/zpuino/N124
+                                                       XLXI_38/zpuino/core/sampledStackOperation_or000321
+    SLICE_X30Y39.F4      net (fanout=2)        0.317   XLXI_38/zpuino/N124
+    SLICE_X30Y39.X       Tilo                  0.660   N317
+                                                       XLXI_38/zpuino/core/decr_decodedOpcode_mux0000<14>_SW0
+    SLICE_X27Y36.F3      net (fanout=3)        0.521   N317
+    SLICE_X27Y36.X       Tilo                  0.612   XLXI_38/zpuino/core/decr_stackOperation_mux0000<1>22
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<1>22
+    SLICE_X27Y35.G2      net (fanout=1)        0.281   XLXI_38/zpuino/core/decr_stackOperation_mux0000<1>22
+    SLICE_X27Y35.CLK     Tgck                  1.006   XLXI_38/zpuino/core/decr.stackOperation_1
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<1>591
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<1>59_f5
+                                                       XLXI_38/zpuino/core/decr.stackOperation_1
+    -------------------------------------------------  ---------------------------
+    Total                                     10.250ns (6.608ns logic, 3.642ns route)
+                                                       (64.5% logic, 35.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.075ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM22.B (RAM)
+  Destination:          XLXI_38/zpuino/core/decr.stackOperation_1 (FF)
+  Requirement:          10.333ns
+  Data Path Delay:      10.245ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.013ns (0.093 - 0.106)
+  Source Clock:         XLXN_408<147> rising at 0.000ns
+  Destination Clock:    XLXN_408<147> rising at 10.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM22.B to XLXI_38/zpuino/core/decr.stackOperation_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y8.DOB0     Tbcko                 2.446   XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM22
+                                                       XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM22.B
+    SLICE_X46Y41.F3      net (fanout=1)        1.419   XLXI_38/zpuino/rom_wb_dat_o<18>
+    SLICE_X46Y41.X       Tilo                  0.660   XLXI_38/zpuino/core/tOpcode_mux0001<2>7
+                                                       XLXI_38/zpuino/core/tOpcode_mux0001<2>7
+    SLICE_X33Y38.G3      net (fanout=4)        0.878   XLXI_38/zpuino/core/tOpcode_mux0001<2>7
+    SLICE_X33Y38.Y       Tilo                  0.612   XLXI_38/zpuino/core/sampledDecodedOpcode_and0000
+                                                       XLXI_38/zpuino/core/tOpcode_mux0001<2>31
+    SLICE_X32Y38.F2      net (fanout=21)       0.173   XLXI_38/zpuino/core/tOpcode<2>
+    SLICE_X32Y38.X       Tilo                  0.660   XLXI_38/zpuino/N124
+                                                       XLXI_38/zpuino/core/sampledStackOperation_or000321
+    SLICE_X30Y39.F4      net (fanout=2)        0.317   XLXI_38/zpuino/N124
+    SLICE_X30Y39.X       Tilo                  0.660   N317
+                                                       XLXI_38/zpuino/core/decr_decodedOpcode_mux0000<14>_SW0
+    SLICE_X27Y36.F3      net (fanout=3)        0.521   N317
+    SLICE_X27Y36.X       Tilo                  0.612   XLXI_38/zpuino/core/decr_stackOperation_mux0000<1>22
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<1>22
+    SLICE_X27Y35.G2      net (fanout=1)        0.281   XLXI_38/zpuino/core/decr_stackOperation_mux0000<1>22
+    SLICE_X27Y35.CLK     Tgck                  1.006   XLXI_38/zpuino/core/decr.stackOperation_1
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<1>591
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<1>59_f5
+                                                       XLXI_38/zpuino/core/decr.stackOperation_1
+    -------------------------------------------------  ---------------------------
+    Total                                     10.245ns (6.656ns logic, 3.589ns route)
+                                                       (65.0% logic, 35.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.173ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM04.B (RAM)
+  Destination:          XLXI_38/zpuino/core/decr.stackOperation_1 (FF)
+  Requirement:          10.333ns
+  Data Path Delay:      10.129ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.031ns (0.093 - 0.124)
+  Source Clock:         XLXN_408<147> rising at 0.000ns
+  Destination Clock:    XLXN_408<147> rising at 10.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM04.B to XLXI_38/zpuino/core/decr.stackOperation_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y9.DOB0     Tbcko                 2.446   XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM04
+                                                       XLXI_38/zpuino/memory/ramrom/ram/Mram_RAM04.B
+    SLICE_X19Y69.F3      net (fanout=1)        1.004   XLXI_38/zpuino/rom_wb_dat_o<6>
+    SLICE_X19Y69.X       Tilo                  0.612   XLXI_38/zpuino/core/tOpcode_mux0001<6>7
+                                                       XLXI_38/zpuino/core/tOpcode_mux0001<6>7
+    SLICE_X18Y55.F4      net (fanout=4)        0.567   XLXI_38/zpuino/core/tOpcode_mux0001<6>7
+    SLICE_X18Y55.X       Tilo                  0.660   XLXI_38/zpuino/core/tOpcode<6>
+                                                       XLXI_38/zpuino/core/tOpcode_mux0001<6>31
+    SLICE_X30Y39.G1      net (fanout=20)       1.012   XLXI_38/zpuino/core/tOpcode<6>
+    SLICE_X30Y39.Y       Tilo                  0.660   N317
+                                                       XLXI_38/zpuino/core/sampledDecodedOpcode_cmp_eq00001
+    SLICE_X30Y39.F3      net (fanout=9)        0.088   XLXI_38/zpuino/core/sampledDecodedOpcode_cmp_eq0000
+    SLICE_X30Y39.X       Tilo                  0.660   N317
+                                                       XLXI_38/zpuino/core/decr_decodedOpcode_mux0000<14>_SW0
+    SLICE_X27Y36.F3      net (fanout=3)        0.521   N317
+    SLICE_X27Y36.X       Tilo                  0.612   XLXI_38/zpuino/core/decr_stackOperation_mux0000<1>22
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<1>22
+    SLICE_X27Y35.G2      net (fanout=1)        0.281   XLXI_38/zpuino/core/decr_stackOperation_mux0000<1>22
+    SLICE_X27Y35.CLK     Tgck                  1.006   XLXI_38/zpuino/core/decr.stackOperation_1
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<1>591
+                                                       XLXI_38/zpuino/core/decr_stackOperation_mux0000<1>59_f5
+                                                       XLXI_38/zpuino/core/decr.stackOperation_1
+    -------------------------------------------------  ---------------------------
+    Total                                     10.129ns (6.656ns logic, 3.473ns route)
+                                                       (65.7% logic, 34.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_38/zpuino/core/exr.tos_19 (SLICE_X12Y40.F4), 177 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.094ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_38/zpuino/stack/stack.A (RAM)
+  Destination:          XLXI_38/zpuino/core/exr.tos_19 (FF)
+  Requirement:          10.333ns
+  Data Path Delay:      10.220ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.019ns (0.031 - 0.050)
+  Source Clock:         XLXN_408<147> rising at 0.000ns
+  Destination Clock:    XLXN_408<147> rising at 10.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_38/zpuino/stack/stack.A to XLXI_38/zpuino/core/exr.tos_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y3.DOA5     Tbcko                 2.446   XLXI_38/zpuino/stack/stack
+                                                       XLXI_38/zpuino/stack/stack.A
+    SLICE_X2Y23.G3       net (fanout=5)        1.492   XLXI_38/zpuino/stack_a_read<5>
+    SLICE_X2Y23.COUT     Topcyg                0.984   XLXI_38/zpuino/core/w1_tos_add0000<4>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_lut<5>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<5>
+    SLICE_X2Y24.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<5>
+    SLICE_X2Y24.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<6>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<6>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<7>
+    SLICE_X2Y25.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<7>
+    SLICE_X2Y25.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<8>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<8>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<9>
+    SLICE_X2Y26.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<9>
+    SLICE_X2Y26.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<10>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<10>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<11>
+    SLICE_X2Y27.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<11>
+    SLICE_X2Y27.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<12>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<12>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<13>
+    SLICE_X2Y28.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<13>
+    SLICE_X2Y28.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<14>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<14>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<15>
+    SLICE_X2Y29.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<15>
+    SLICE_X2Y29.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<16>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<16>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<17>
+    SLICE_X2Y30.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<17>
+    SLICE_X2Y30.Y        Tciny                 0.768   XLXI_38/zpuino/core/w1_tos_add0000<18>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<18>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_xor<19>
+    SLICE_X1Y26.F3       net (fanout=1)        0.511   XLXI_38/zpuino/core/w1_tos_add0000<19>
+    SLICE_X1Y26.X        Tilo                  0.612   N578
+                                                       XLXI_38/zpuino/core/w1_tos_19_mux0002127_SW0
+    SLICE_X12Y40.G1      net (fanout=1)        1.273   N578
+    SLICE_X12Y40.Y       Tilo                  0.660   XLXI_38/zpuino/core/exr.tos_19
+                                                       XLXI_38/zpuino/core/w1_tos_19_mux0002127
+    SLICE_X12Y40.F4      net (fanout=1)        0.020   XLXI_38/zpuino/core/w1_tos_19_mux0002127/O
+    SLICE_X12Y40.CLK     Tfck                  0.776   XLXI_38/zpuino/core/exr.tos_19
+                                                       XLXI_38/zpuino/core/w1_tos_19_mux0002136
+                                                       XLXI_38/zpuino/core/exr.tos_19
+    -------------------------------------------------  ---------------------------
+    Total                                     10.220ns (6.924ns logic, 3.296ns route)
+                                                       (67.7% logic, 32.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.176ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_38/zpuino/stack/stack.B (RAM)
+  Destination:          XLXI_38/zpuino/core/exr.tos_19 (FF)
+  Requirement:          10.333ns
+  Data Path Delay:      10.138ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.019ns (0.031 - 0.050)
+  Source Clock:         XLXN_408<147> rising at 0.000ns
+  Destination Clock:    XLXN_408<147> rising at 10.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_38/zpuino/stack/stack.B to XLXI_38/zpuino/core/exr.tos_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y3.DOB6     Tbcko                 2.446   XLXI_38/zpuino/stack/stack
+                                                       XLXI_38/zpuino/stack/stack.B
+    SLICE_X2Y24.F3       net (fanout=6)        1.496   XLXI_38/zpuino/stack_b_read<6>
+    SLICE_X2Y24.COUT     Topcyf                1.011   XLXI_38/zpuino/core/w1_tos_add0000<6>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_lut<6>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<6>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<7>
+    SLICE_X2Y25.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<7>
+    SLICE_X2Y25.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<8>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<8>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<9>
+    SLICE_X2Y26.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<9>
+    SLICE_X2Y26.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<10>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<10>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<11>
+    SLICE_X2Y27.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<11>
+    SLICE_X2Y27.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<12>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<12>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<13>
+    SLICE_X2Y28.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<13>
+    SLICE_X2Y28.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<14>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<14>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<15>
+    SLICE_X2Y29.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<15>
+    SLICE_X2Y29.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<16>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<16>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<17>
+    SLICE_X2Y30.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<17>
+    SLICE_X2Y30.Y        Tciny                 0.768   XLXI_38/zpuino/core/w1_tos_add0000<18>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<18>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_xor<19>
+    SLICE_X1Y26.F3       net (fanout=1)        0.511   XLXI_38/zpuino/core/w1_tos_add0000<19>
+    SLICE_X1Y26.X        Tilo                  0.612   N578
+                                                       XLXI_38/zpuino/core/w1_tos_19_mux0002127_SW0
+    SLICE_X12Y40.G1      net (fanout=1)        1.273   N578
+    SLICE_X12Y40.Y       Tilo                  0.660   XLXI_38/zpuino/core/exr.tos_19
+                                                       XLXI_38/zpuino/core/w1_tos_19_mux0002127
+    SLICE_X12Y40.F4      net (fanout=1)        0.020   XLXI_38/zpuino/core/w1_tos_19_mux0002127/O
+    SLICE_X12Y40.CLK     Tfck                  0.776   XLXI_38/zpuino/core/exr.tos_19
+                                                       XLXI_38/zpuino/core/w1_tos_19_mux0002136
+                                                       XLXI_38/zpuino/core/exr.tos_19
+    -------------------------------------------------  ---------------------------
+    Total                                     10.138ns (6.838ns logic, 3.300ns route)
+                                                       (67.4% logic, 32.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.313ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_38/zpuino/stack/stack.A (RAM)
+  Destination:          XLXI_38/zpuino/core/exr.tos_19 (FF)
+  Requirement:          10.333ns
+  Data Path Delay:      10.001ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.019ns (0.031 - 0.050)
+  Source Clock:         XLXN_408<147> rising at 0.000ns
+  Destination Clock:    XLXN_408<147> rising at 10.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_38/zpuino/stack/stack.A to XLXI_38/zpuino/core/exr.tos_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y3.DOA1     Tbcko                 2.446   XLXI_38/zpuino/stack/stack
+                                                       XLXI_38/zpuino/stack/stack.A
+    SLICE_X2Y21.G3       net (fanout=5)        1.047   XLXI_38/zpuino/stack_a_read<1>
+    SLICE_X2Y21.COUT     Topcyg                0.984   XLXI_38/zpuino/core/w1_tos_add0000<0>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_lut<1>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<1>
+    SLICE_X2Y22.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<1>
+    SLICE_X2Y22.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<2>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<2>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<3>
+    SLICE_X2Y23.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<3>
+    SLICE_X2Y23.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<4>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<4>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<5>
+    SLICE_X2Y24.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<5>
+    SLICE_X2Y24.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<6>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<6>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<7>
+    SLICE_X2Y25.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<7>
+    SLICE_X2Y25.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<8>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<8>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<9>
+    SLICE_X2Y26.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<9>
+    SLICE_X2Y26.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<10>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<10>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<11>
+    SLICE_X2Y27.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<11>
+    SLICE_X2Y27.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<12>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<12>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<13>
+    SLICE_X2Y28.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<13>
+    SLICE_X2Y28.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<14>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<14>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<15>
+    SLICE_X2Y29.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<15>
+    SLICE_X2Y29.COUT     Tbyp                  0.113   XLXI_38/zpuino/core/w1_tos_add0000<16>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<16>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<17>
+    SLICE_X2Y30.CIN      net (fanout=1)        0.000   XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<17>
+    SLICE_X2Y30.Y        Tciny                 0.768   XLXI_38/zpuino/core/w1_tos_add0000<18>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_cy<18>
+                                                       XLXI_38/zpuino/core/Madd_w1.tos_add0000_xor<19>
+    SLICE_X1Y26.F3       net (fanout=1)        0.511   XLXI_38/zpuino/core/w1_tos_add0000<19>
+    SLICE_X1Y26.X        Tilo                  0.612   N578
+                                                       XLXI_38/zpuino/core/w1_tos_19_mux0002127_SW0
+    SLICE_X12Y40.G1      net (fanout=1)        1.273   N578
+    SLICE_X12Y40.Y       Tilo                  0.660   XLXI_38/zpuino/core/exr.tos_19
+                                                       XLXI_38/zpuino/core/w1_tos_19_mux0002127
+    SLICE_X12Y40.F4      net (fanout=1)        0.020   XLXI_38/zpuino/core/w1_tos_19_mux0002127/O
+    SLICE_X12Y40.CLK     Tfck                  0.776   XLXI_38/zpuino/core/exr.tos_19
+                                                       XLXI_38/zpuino/core/w1_tos_19_mux0002136
+                                                       XLXI_38/zpuino/core/exr.tos_19
+    -------------------------------------------------  ---------------------------
+    Total                                     10.001ns (7.150ns logic, 2.851ns route)
+                                                       (71.5% logic, 28.5% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: PERIOD analysis for net "XLXI_38/clkgen_inst/dcmclock" derived from
+ NET "XLXI_38/clk_osc_32Mhz" PERIOD = 31 ns HIGH 50%;
+ divided by 3.00 to 10.333 nS and duty cycle corrected to HIGH 5.166 nS 
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_38/uart_inst/fifo_instance/Mram_memory.A (RAMB16_X1Y0.DIA3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.727ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_38/uart_inst/rx_inst/datao_3 (FF)
+  Destination:          XLXI_38/uart_inst/fifo_instance/Mram_memory.A (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.729ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.036 - 0.034)
+  Source Clock:         XLXN_408<147> rising at 10.333ns
+  Destination Clock:    XLXN_408<147> rising at 10.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: XLXI_38/uart_inst/rx_inst/datao_3 to XLXI_38/uart_inst/fifo_instance/Mram_memory.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y0.XQ       Tcko                  0.411   XLXI_38/uart_inst/rx_inst/datao<3>
+                                                       XLXI_38/uart_inst/rx_inst/datao_3
+    RAMB16_X1Y0.DIA3     net (fanout=1)        0.428   XLXI_38/uart_inst/rx_inst/datao<3>
+    RAMB16_X1Y0.CLKA     Tbckd       (-Th)     0.110   XLXI_38/uart_inst/fifo_instance/Mram_memory
+                                                       XLXI_38/uart_inst/fifo_instance/Mram_memory.A
+    -------------------------------------------------  ---------------------------
+    Total                                      0.729ns (0.301ns logic, 0.428ns route)
+                                                       (41.3% logic, 58.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_38/uart_inst/fifo_instance/Mram_memory.A (RAMB16_X1Y0.DIA7), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.728ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_38/uart_inst/rx_inst/datao_7 (FF)
+  Destination:          XLXI_38/uart_inst/fifo_instance/Mram_memory.A (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.730ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.036 - 0.034)
+  Source Clock:         XLXN_408<147> rising at 10.333ns
+  Destination Clock:    XLXN_408<147> rising at 10.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: XLXI_38/uart_inst/rx_inst/datao_7 to XLXI_38/uart_inst/fifo_instance/Mram_memory.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X54Y0.XQ       Tcko                  0.412   XLXI_38/uart_inst/rx_inst/datao<7>
+                                                       XLXI_38/uart_inst/rx_inst/datao_7
+    RAMB16_X1Y0.DIA7     net (fanout=1)        0.428   XLXI_38/uart_inst/rx_inst/datao<7>
+    RAMB16_X1Y0.CLKA     Tbckd       (-Th)     0.110   XLXI_38/uart_inst/fifo_instance/Mram_memory
+                                                       XLXI_38/uart_inst/fifo_instance/Mram_memory.A
+    -------------------------------------------------  ---------------------------
+    Total                                      0.730ns (0.302ns logic, 0.428ns route)
+                                                       (41.4% logic, 58.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_53/fifo_instance/Mram_memory3.SLICEM_F (SLICE_X42Y41.G3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.762ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_53/fifo_instance/wraddr_2 (FF)
+  Destination:          XLXI_53/fifo_instance/Mram_memory3.SLICEM_F (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.764ns (Levels of Logic = 1)
+  Clock Path Skew:      0.002ns (0.014 - 0.012)
+  Source Clock:         XLXN_408<147> rising at 10.333ns
+  Destination Clock:    XLXN_408<147> rising at 10.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: XLXI_53/fifo_instance/wraddr_2 to XLXI_53/fifo_instance/Mram_memory3.SLICEM_F
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y39.YQ      Tcko                  0.409   XLXI_53/fifo_instance/wraddr<3>
+                                                       XLXI_53/fifo_instance/wraddr_2
+    SLICE_X42Y41.G3      net (fanout=12)       0.354   XLXI_53/fifo_instance/wraddr<2>
+    SLICE_X42Y41.CLK     Tah         (-Th)    -0.001   XLXI_53/fifo_instance/read<2>
+                                                       XLXI_53/fifo_instance/Mram_memory3.SLICEM_F
+    -------------------------------------------------  ---------------------------
+    Total                                      0.764ns (0.410ns logic, 0.354ns route)
+                                                       (53.7% logic, 46.3% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: PERIOD analysis for net "XLXI_38/clkgen_inst/dcmclock" derived from
+ NET "XLXI_38/clk_osc_32Mhz" PERIOD = 31 ns HIGH 50%;
+ divided by 3.00 to 10.333 nS and duty cycle corrected to HIGH 5.166 nS 
+
+--------------------------------------------------------------------------------
+Slack: 6.629ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.333ns
+  Low pulse: 5.166ns
+  Low pulse limit: 1.852ns (Tmspwl_P)
+  Physical resource: XLXI_38/zpuino/core/shl/Mmult_rq_0_mult0000_submult_0/CLK
+  Logical resource: XLXI_38/zpuino/core/shl/Mmult_rq_0_mult0000_submult_0/CLK
+  Location pin: MULT18X18_X0Y6.CLK
+  Clock network: XLXN_408<147>
+--------------------------------------------------------------------------------
+Slack: 6.629ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.333ns
+  High pulse: 5.166ns
+  High pulse limit: 1.852ns (Tmspwh_P)
+  Physical resource: XLXI_38/zpuino/core/shl/Mmult_rq_0_mult0000_submult_0/CLK
+  Logical resource: XLXI_38/zpuino/core/shl/Mmult_rq_0_mult0000_submult_0/CLK
+  Location pin: MULT18X18_X0Y6.CLK
+  Clock network: XLXN_408<147>
+--------------------------------------------------------------------------------
+Slack: 6.629ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.333ns
+  Low pulse: 5.166ns
+  Low pulse limit: 1.852ns (Tmspwl_P)
+  Physical resource: XLXI_38/zpuino/core/shl/Mmult_rq_0_mult0000_submult_1/CLK
+  Logical resource: XLXI_38/zpuino/core/shl/Mmult_rq_0_mult0000_submult_1/CLK
+  Location pin: MULT18X18_X0Y5.CLK
+  Clock network: XLXN_408<147>
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for XLXI_38/clk_osc_32Mhz
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|XLXI_38/clk_osc_32Mhz          |     31.000ns|     10.000ns|     32.172ns|            0|            1|            0|        94859|
+| XLXI_38/clkgen_inst/dcmclock  |     10.333ns|     10.724ns|          N/A|            1|            0|        94859|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |   10.724|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 1  Score: 391  (Setup/Max: 391, Hold: 0)
+
+Constraints cover 94859 paths, 0 nets, and 16126 connections
+
+Design statistics:
+   Minimum period:  10.724ns{1}   (Maximum frequency:  93.249MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Thu Jul 10 12:55:56 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 220 MB
+
+
+

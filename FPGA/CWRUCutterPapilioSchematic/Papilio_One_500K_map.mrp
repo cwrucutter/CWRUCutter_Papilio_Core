@@ -1,0 +1,245 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'Papilio_One_500K'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s500e-vq100-5 -cm area -ir off -pr off
+-c 100 -o Papilio_One_500K_map.ncd Papilio_One_500K.ngd Papilio_One_500K.pcf 
+Target Device  : xc3s500e
+Target Package : vq100
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Thu Jul 10 12:54:33 2014
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    1
+Logic Utilization:
+  Number of Slice Flip Flops:         2,046 out of   9,312   21%
+  Number of 4 input LUTs:             3,266 out of   9,312   35%
+Logic Distribution:
+  Number of occupied Slices:          2,495 out of   4,656   53%
+    Number of Slices containing only related logic:   2,495 out of   2,495 100%
+    Number of Slices containing unrelated logic:          0 out of   2,495   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       3,608 out of   9,312   38%
+    Number used as logic:             3,202
+    Number used as a route-thru:        342
+    Number used for Dual Port RAMs:      32
+      (Two LUTs used per Dual Port RAM)
+    Number used as Shift registers:      32
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 55 out of      66   83%
+  Number of RAMB16s:                     18 out of      20   90%
+  Number of BUFGMUXs:                     3 out of      24   12%
+  Number of DCMs:                         2 out of       4   50%
+  Number of MULT18X18SIOs:                3 out of      20   15%
+
+Average Fanout of Non-Clock Nets:                3.28
+
+Peak Memory Usage:  305 MB
+Total REAL time to MAP completion:  4 secs 
+Total CPU time to MAP completion:   4 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Pack:1186 - One or more I/O components have conflicting property values.
+    For each occurrence, the system will use the property value attached to the
+   pad.  Otherwise, the system will use the first property value read.  To view
+   each occurrence, create a detailed map report (run map using the -detail
+   option).
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network XLXI_54/fifo_instance/Mram_memory1/SPO has no
+   load.
+INFO:LIT:395 - The above info message is repeated 15 more times for the
+   following (max. 5 shown):
+   XLXI_54/fifo_instance/Mram_memory2/SPO,
+   XLXI_54/fifo_instance/Mram_memory3/SPO,
+   XLXI_54/fifo_instance/Mram_memory4/SPO,
+   XLXI_54/fifo_instance/Mram_memory5/SPO,
+   XLXI_54/fifo_instance/Mram_memory8/SPO
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:159 - Net Timing constraints on signal CLK are pushed forward
+   through input buffer.
+INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp
+   XLXI_38/clkgen_inst/DCM_inst, consult the device Interactive Data Sheet.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) removed
+   2 block(s) optimized away
+   1 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "XLXI_38/clkgen_inst/clkfx_inst_1mhz" (CKBUF) removed.
+ The signal "XLXI_38/clkgen_inst/dcmclock_1mhz" is loadless and has been removed.
+Loadless block "XLXI_38/clkgen_inst/vgainst" (CKBUF) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| CLK                                | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| RXD                                | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| SPI_CS                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
+| SPI_MISO                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| SPI_MOSI                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| SPI_SCK                            | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| TXD                                | IOB              | OUTPUT    | LVTTL                |       | 8        | FAST |              |          | 0 / 0    |
+| WING_AH0                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_AH1                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_AH2                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_AH3                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_AH4                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_AH5                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_AH6                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_AH7                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_AL0                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_AL1                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_AL2                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_AL3                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_AL4                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_AL5                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_AL6                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_AL7                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_BH0                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_BH1                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_BH2                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_BH3                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_BH4                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_BH5                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_BH6                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_BH7                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_BL0                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_BL1                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_BL2                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_BL3                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_BL4                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_BL5                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_BL6                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_BL7                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_CH0                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_CH1                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| WING_CH2                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_CH3                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_CH4                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_CH5                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| WING_CH6                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| WING_CH7                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| WING_CL0                           | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_CL1                           | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| WING_CL2                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| WING_CL3                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| WING_CL4                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| WING_CL5                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| WING_CL6                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| WING_CL7                           | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

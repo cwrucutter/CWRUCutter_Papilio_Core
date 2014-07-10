@@ -1,0 +1,6 @@
+work	"../CWRUCutterVHDLFiles/CWRUCutter_PWM_Output_Module/CWRUCutter_PWMOutput.vhd"
+work	"../CWRUCutterVHDLFiles/CWRUCutter_PWM_Output_Module/PWM_OUT_NO_WB.vhd"
+board	"Libraries/ZPUino_1/board_Papilio_One_500k/zpu_config.vhd"
+board	"Libraries/ZPUino_1/board_Papilio_One_500k/zpuino_config.vhd"
+board	"Libraries/ZPUino_1/board_Papilio_One_500k/zpuinopkg.vhd"
+board	"Libraries/ZPUino_1/board_Papilio_One_500k/zpupkg.vhd"

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="wb_Dual_Quad_Encoder">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2014-7-10T14:58:39</timestamp>
+    <pin polarity="Input" x="0" y="-32" name="ENC_TWO_B" />
+    <pin polarity="Input" x="0" y="-64" name="ENC_TWO_A" />
+    <pin polarity="Input" x="0" y="-96" name="ENC_ONE_B" />
+    <pin polarity="Input" x="0" y="-128" name="ENC_ONE_A" />
+    <pin polarity="Input" x="128" y="-208" name="wishbone_in(61:0)" />
+    <pin polarity="Output" x="144" y="-208" name="wishbone_out(33:0)" />
+    <graph>
+        <rect width="184" x="64" y="-156" height="156" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin ENC_TWO_B" />
+        <line x2="0" y1="-64" y2="-64" x1="64" />
+        <line x2="0" y1="-96" y2="-96" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-64" type="pin ENC_TWO_A" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin ENC_ONE_B" />
+        <line x2="0" y1="-128" y2="-128" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-128" type="pin ENC_ONE_A" />
+        <line x2="144" y1="-156" y2="-208" x1="144" />
+        <line x2="128" y1="-156" y2="-208" x1="128" />
+        <attrtext style="alignment:BCENTER;fontsize:24;fontname:Arial" attrname="SymbolName" x="136" y="40" type="symbol" />
+    </graph>
+</symbol>

@@ -1,0 +1,11 @@
+EN prom_generic_dualport NULL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/prom-generic-dp-32.vhd sub00/vhpl04 1405011229
+EN zpuino_stack NULL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/stack.vhd sub00/vhpl07 1405011232
+EN clkgen NULL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/clkgen.vhd sub00/vhpl09 1405011234
+PH zpuinopkg NULL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/zpuinopkg.vhd sub00/vhpl03 1405011236
+PH zpupkg NULL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/zpupkg.vhd sub00/vhpl01 1405011227
+AR prom_generic_dualport behave C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/prom-generic-dp-32.vhd sub00/vhpl05 1405011230
+AR clkgen behave C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/clkgen.vhd sub00/vhpl10 1405011235
+PH zpuino_config NULL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/zpuino_config.vhd sub00/vhpl02 1405011228
+PH zpu_config NULL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/zpu_config.vhd sub00/vhpl00 1405011226
+AR zpuino_stack behave C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/stack.vhd sub00/vhpl08 1405011233
+PH wishbonepkg NULL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/wishbonepkg.vhd sub00/vhpl06 1405011231

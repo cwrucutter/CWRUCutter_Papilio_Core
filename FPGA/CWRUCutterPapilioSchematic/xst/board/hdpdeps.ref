@@ -1,0 +1,58 @@
+V3 53
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/clkgen.vhd 2014/01/30.14:02:52 P.20131013
+EN board/clkgen 1405011234 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/clkgen.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR board/clkgen/behave 1405011235 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/clkgen.vhd \
+      EN board/clkgen 1405011234 CP BUFG CP IBUFG CP DCM
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/prom-generic-dp-32.vhd 2014/01/30.14:02:52 P.20131013
+EN board/prom_generic_dualport 1405011229 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/prom-generic-dp-32.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181
+AR board/prom_generic_dualport/behave 1405011230 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/prom-generic-dp-32.vhd \
+      EN board/prom_generic_dualport 1405011229
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/stack.vhd 2014/01/30.14:02:52 P.20131013
+EN board/zpuino_stack 1405011232 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/stack.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PH board/zpu_config 1405011226 PH board/zpupkg 1405011227 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR board/zpuino_stack/behave 1405011233 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/stack.vhd \
+      EN board/zpuino_stack 1405011232 CP RAMB16_S36_S36
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/wishbonepkg.vhd 2014/01/30.14:02:52 P.20131013
+PH board/wishbonepkg 1405011231 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/wishbonepkg.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/zpuinopkg.vhd 2014/01/30.14:02:52 P.20131013
+PH board/zpuinopkg 1405011236 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/zpuinopkg.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PH board/zpu_config 1405011226 PH board/zpupkg 1405011227 \
+      PH board/zpuino_config 1405011228 CD zpuino_top_icache CD zpuino_top \
+      CD zpuino_top_hyperion CD zpuino_io CD zpuino_empty_device CD zpuino_spi \
+      CD zpuino_uart CD zpuino_gpio CD zpuino_timers CD zpuino_intr \
+      CD zpuino_sigmadelta CD zpuino_crc16 CD zpuino_adc CD sram_ctrl \
+      CD zpuino_sevenseg CD wbarb2_1 CD wbbootloadermux CD wb_master_np_to_slave_p \
+      CD generic_sp_ram CD generic_dp_ram CD zpuino_io_YM2149 CD wb_sid6581 \
+      CD zpuino_vga CD simple_sigmadelta CD zpuino_serialreset
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/zpuino_config.vhd 2014/01/30.14:02:52 P.20131013
+PH board/zpuino_config 1405011228 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/zpuino_config.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/std_logic_arith 1381692177
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/zpupkg.vhd 2014/01/30.14:02:52 P.20131013
+PH board/zpupkg 1405011227 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/zpupkg.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB board \
+      PH board/zpu_config 1405011226 CD trace CD zpu_core_extreme_icache \
+      CD zpu_core_extreme
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/zpu_config.vhd 2014/01/30.14:02:52 P.20131013
+PH board/zpu_config 1405011226 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/ZPUino_1/board_Papilio_One_500k/zpu_config.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/std_logic_arith 1381692177

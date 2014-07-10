@@ -1,0 +1,16 @@
+EN zpuino_uart_rx NULL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/zpuino_uart_rx.vhd sub00/vhpl04 1405011308
+AR spi behave C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/spi.vhd sub00/vhpl13 1405011325
+EN wishbone_empty_slot NULL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/Wishbone_Empty_Slot.vhd sub00/vhpl10 1405011322
+EN comm_zpuino_wb_uart NULL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/COMM_zpuino_wb_UART.vhd sub00/vhpl08 1405011320
+AR spiclkgen behave C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/spiclkgen.vhd sub00/vhpl15 1405011327
+EN txunit NULL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/tx_unit.vhd sub00/vhpl06 1405011310
+AR uart_brgen behave C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/uart_brgen.vhd sub00/vhpl03 1405011289
+AR zpuino_uart_rx behave C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/zpuino_uart_rx.vhd sub00/vhpl05 1405011309
+AR wishbone_empty_slot behave C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/Wishbone_Empty_Slot.vhd sub00/vhpl11 1405011323
+AR txunit behaviour C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/tx_unit.vhd sub00/vhpl07 1405011311
+EN spi NULL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/spi.vhd sub00/vhpl12 1405011324
+EN uart_brgen NULL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/uart_brgen.vhd sub00/vhpl02 1405011288
+EN spiclkgen NULL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/spiclkgen.vhd sub00/vhpl14 1405011326
+AR comm_zpuino_wb_uart behave C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/COMM_zpuino_wb_UART.vhd sub00/vhpl09 1405011321
+AR zpuino_uart_mv_filter behave C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/zpuino_uart_mv_filter.vhd sub00/vhpl01 1405011287
+EN zpuino_uart_mv_filter NULL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/zpuino_uart_mv_filter.vhd sub00/vhpl00 1405011286

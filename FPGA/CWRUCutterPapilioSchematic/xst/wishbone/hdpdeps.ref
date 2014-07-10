@@ -1,0 +1,64 @@
+V3 32
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/COMM_zpuino_wb_UART.vhd 2014/01/30.14:02:52 P.20131013
+EN wishbone/COMM_zpuino_wb_UART 1405011320 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/COMM_zpuino_wb_UART.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB board \
+      PH board/zpu_config 1405011226 PH board/zpupkg 1405011227 PH board/zpuinopkg 1405011236
+AR wishbone/COMM_zpuino_wb_UART/behave 1405011321 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/COMM_zpuino_wb_UART.vhd \
+      EN wishbone/COMM_zpuino_wb_UART 1405011320 CP zpuino_uart_rx CP TxUnit \
+      CP uart_brgen CP fifo
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/spi.vhd 2014/01/30.14:02:52 P.20131013
+EN wishbone/spi 1405011324 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/spi.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR wishbone/spi/behave 1405011325 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/spi.vhd \
+      EN wishbone/spi 1405011324
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/spiclkgen.vhd 2014/01/30.14:02:52 P.20131013
+EN wishbone/spiclkgen 1405011326 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/spiclkgen.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR wishbone/spiclkgen/behave 1405011327 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/spiclkgen.vhd \
+      EN wishbone/spiclkgen 1405011326 CP prescaler
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/tx_unit.vhd 2014/01/30.14:02:52 P.20131013
+EN wishbone/TxUnit 1405011310 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/tx_unit.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR wishbone/TxUnit/Behaviour 1405011311 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/tx_unit.vhd \
+      EN wishbone/TxUnit 1405011310
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/uart_brgen.vhd 2014/01/30.14:02:52 P.20131013
+EN wishbone/uart_brgen 1405011288 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/uart_brgen.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR wishbone/uart_brgen/behave 1405011289 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/uart_brgen.vhd \
+      EN wishbone/uart_brgen 1405011288
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/Wishbone_Empty_Slot.vhd 2014/01/30.14:02:52 P.20131013
+EN wishbone/Wishbone_Empty_Slot 1405011322 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/Wishbone_Empty_Slot.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB board \
+      PH board/zpu_config 1405011226 PH board/zpuino_config 1405011228 \
+      PH board/zpupkg 1405011227 PH board/zpuinopkg 1405011236 LB zpuino \
+      PB zpuino/papilio_pkg 1405011262
+AR wishbone/Wishbone_Empty_Slot/behave 1405011323 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/Wishbone_Empty_Slot.vhd \
+      EN wishbone/Wishbone_Empty_Slot 1405011322
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/zpuino_uart_mv_filter.vhd 2014/01/30.14:02:52 P.20131013
+EN wishbone/zpuino_uart_mv_filter 1405011286 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/zpuino_uart_mv_filter.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB board \
+      PH board/zpu_config 1405011226 PH board/zpupkg 1405011227 PH board/zpuinopkg 1405011236
+AR wishbone/zpuino_uart_mv_filter/behave 1405011287 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/zpuino_uart_mv_filter.vhd \
+      EN wishbone/zpuino_uart_mv_filter 1405011286
+FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/zpuino_uart_rx.vhd 2014/01/30.14:02:52 P.20131013
+EN wishbone/zpuino_uart_rx 1405011308 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/zpuino_uart_rx.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB board \
+      PH board/zpu_config 1405011226 PH board/zpupkg 1405011227 PH board/zpuinopkg 1405011236
+AR wishbone/zpuino_uart_rx/behave 1405011309 \
+      FL C:/Users/Setup/Dropbox/CWRUCutter_Papilio_Core/FPGA/CWRUCutterPapilioSchematic/Libraries/Wishbone_Peripherals/zpuino_uart_rx.vhd \
+      EN wishbone/zpuino_uart_rx 1405011308 CP zpuino_uart_mv_filter CP uart_brgen

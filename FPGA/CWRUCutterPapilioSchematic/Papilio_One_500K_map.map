@@ -1,0 +1,80 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Map Application Log File for Design 'Papilio_One_500K'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s500e-vq100-5 -cm area -ir off -pr off
+-c 100 -o Papilio_One_500K_map.ncd Papilio_One_500K.ngd Papilio_One_500K.pcf 
+Target Device  : xc3s500e
+Target Package : vq100
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Thu Jul 10 12:54:33 2014
+
+Mapping design into LUTs...
+Running directed packing...
+WARNING:Pack:1186 - One or more I/O components have conflicting property values.
+    For each occurrence, the system will use the property value attached to the
+   pad.  Otherwise, the system will use the first property value read.  To view
+   each occurrence, create a detailed map report (run map using the -detail
+   option).
+Running delay-based LUT packing...
+Running related packing...
+Updating timing models...
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    1
+Logic Utilization:
+  Number of Slice Flip Flops:         2,046 out of   9,312   21%
+  Number of 4 input LUTs:             3,266 out of   9,312   35%
+Logic Distribution:
+  Number of occupied Slices:          2,495 out of   4,656   53%
+    Number of Slices containing only related logic:   2,495 out of   2,495 100%
+    Number of Slices containing unrelated logic:          0 out of   2,495   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       3,608 out of   9,312   38%
+    Number used as logic:             3,202
+    Number used as a route-thru:        342
+    Number used for Dual Port RAMs:      32
+      (Two LUTs used per Dual Port RAM)
+    Number used as Shift registers:      32
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 55 out of      66   83%
+  Number of RAMB16s:                     18 out of      20   90%
+  Number of BUFGMUXs:                     3 out of      24   12%
+  Number of DCMs:                         2 out of       4   50%
+  Number of MULT18X18SIOs:                3 out of      20   15%
+
+Average Fanout of Non-Clock Nets:                3.28
+
+Peak Memory Usage:  305 MB
+Total REAL time to MAP completion:  4 secs 
+Total CPU time to MAP completion:   4 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "Papilio_One_500K_map.mrp" for details.
